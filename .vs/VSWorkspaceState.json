@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TodoRazorPages",
+    "\\TodoRazorPages\\TodoRazorPages"
   ],
+  "SelectedNode": "\\TodoRazorPages\\TodoRazorPages.sln",
   "PreviewInSolutionExplorer": false
 }

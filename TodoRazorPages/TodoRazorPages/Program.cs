@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TodoRazorPages.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<TodoRazorPagesContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("TodoRazorPagesContext") ?? throw new InvalidOperationException("Connection string 'TodoRazorPagesContext' not found.")));
 
 var app = builder.Build();
 
